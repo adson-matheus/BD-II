@@ -25,5 +25,27 @@ CREATE TABLE IF NOT EXISTS public.departamento
         ON UPDATE CASCADE
         ON DELETE SET NULL
         NOT VALID
-)
+);
+
+CREATE TABLE IF NOT EXISTS public.projeto
+(
+    codigo integer NOT NULL DEFAULT nextval('projeto_codigo_seq'::regclass),
+    nome character varying(255) COLLATE pg_catalog."default",
+    descricao character varying(255) COLLATE pg_catalog."default",
+    cod_depto integer,
+    cod_responsavel integer,
+    data_inicio date,
+    data_fim date,
+    CONSTRAINT projeto_pkey PRIMARY KEY (codigo),
+    CONSTRAINT cod_depto FOREIGN KEY (cod_depto)
+        REFERENCES public.departamento (codigo) MATCH SIMPLE
+        ON UPDATE CASCADE
+        ON DELETE SET NULL
+        NOT VALID,
+    CONSTRAINT cod_responsavel FOREIGN KEY (cod_responsavel)
+        REFERENCES public.funcionario (codigo) MATCH SIMPLE
+        ON UPDATE CASCADE
+        ON DELETE SET NULL
+        NOT VALID
+);
 
