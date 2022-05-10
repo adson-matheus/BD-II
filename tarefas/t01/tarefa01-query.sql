@@ -18,3 +18,20 @@ FROM funcionario f, departamento d
 WHERE f.cod_depto = d.codigo
 AND f.codigo NOT IN (SELECT cod_gerente FROM departamento WHERE cod_gerente IS NOT NULL)
 ORDER BY d.codigo;
+
+--5) Responda as perguntas:
+    --a)Explique os problemas de termos valores nulos nos dados.
+        --Problemas com funções, com junções, problemas em SELECT, pode ocultar valores de uma pesquisa.
+        --Pode ocasionar erros no banco ao deixar um valor nulo
+    --b)Explique o funcionamento do Right e do Left Join.
+        --LEFT JOIN: retorna tudo da tabela 1 (left table),
+        --além dos valores que coincidirem na tabela 2 (right table).
+        --Pode retornar 0 valores da tabela da direita.
+
+        --RIGHT JOIN: é a mesma coisa do LEFT JOIN, só que onde tem tabela 1 leia-se
+        --tabela 2, e vice-versa.
+    --c)Explique o funcionamento do Full Outer Join e
+    --como pode ser feito no MySQL ou MariaDB que não tem mais o comando Full.
+        --Pega tudo da tabela 01 ou 02 e retorna caso haja algum 'match' na condição WHERE.
+        --Para usar no MariaDB é só usar um LEFT JOIN, UNION, e um RIGHT JOIN que 
+        --vira um FULL JOIN (gambiarra)
