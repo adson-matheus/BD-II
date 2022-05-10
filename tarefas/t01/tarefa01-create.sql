@@ -64,3 +64,21 @@ CREATE TABLE IF NOT EXISTS public.atividade
         ON DELETE SET NULL
         NOT VALID
 );
+
+CREATE TABLE IF NOT EXISTS public.atividade_projeto
+(
+    codigo integer NOT NULL,
+    cod_projeto integer,
+    cod_atividade integer,
+    CONSTRAINT atividade_projeto_pkey PRIMARY KEY (codigo),
+    CONSTRAINT cod_atividade FOREIGN KEY (cod_atividade)
+        REFERENCES public.atividade (codigo) MATCH SIMPLE
+        ON UPDATE CASCADE
+        ON DELETE SET NULL
+        NOT VALID,
+    CONSTRAINT cod_projeto FOREIGN KEY (cod_projeto)
+        REFERENCES public.projeto (codigo) MATCH SIMPLE
+        ON UPDATE CASCADE
+        ON DELETE SET NULL
+        NOT VALID
+);
