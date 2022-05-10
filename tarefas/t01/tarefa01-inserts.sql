@@ -61,3 +61,19 @@ VALUES ('CRUD de Aluno', 'Criar o CRUD', 4, '2022/05/12', '2022/05/15');
 
 INSERT INTO atividade (nome, descricao, cod_responsavel, data_inicio, data_fim)
 VALUES ('Atualizar carga horária', 'definir CH das disciplinas', 5, '2022/05/20', '2022/05/22');
+
+--Atividades do Projeto
+INSERT INTO atividade_projeto(cod_projeto, cod_atividade)
+VALUES (1, 3);
+
+INSERT INTO atividade_projeto(cod_projeto, cod_atividade)
+VALUES (5, 1);
+
+INSERT INTO atividade_projeto(cod_projeto, cod_atividade)
+VALUES (3, 4);
+
+INSERT INTO atividade_projeto(cod_projeto, cod_atividade)
+VALUES (4, 2);
+
+INSERT INTO atividade_projeto(cod_projeto, cod_atividade)
+VALUES (2, 5);
