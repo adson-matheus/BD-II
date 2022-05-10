@@ -35,3 +35,10 @@ ORDER BY d.codigo;
         --Pega tudo da tabela 01 ou 02 e retorna caso haja algum 'match' na condição WHERE.
         --Para usar no MariaDB é só usar um LEFT JOIN, UNION, e um RIGHT JOIN que 
         --vira um FULL JOIN (gambiarra)
+
+--6) Faça uma consulta que selecione o nome, o salário dos funcionários
+--e a descrição do departamento, mesmo que eles não tenham departamentos associados.
+SELECT f.nome, f.salario, d.descricao
+FROM funcionario f
+LEFT JOIN departamento d
+ON (f.cod_depto = d.codigo);
