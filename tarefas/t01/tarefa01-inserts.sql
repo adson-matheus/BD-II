@@ -77,3 +77,24 @@ VALUES (4, 2);
 
 INSERT INTO atividade_projeto(cod_projeto, cod_atividade)
 VALUES (2, 5);
+
+--Update: add departamento p/ funcionario
+UPDATE funcionario
+SET cod_depto = 1
+WHERE codigo = 1;
+
+UPDATE funcionario
+SET cod_depto = 1
+WHERE codigo = 2;
+
+UPDATE funcionario
+SET cod_depto = 4
+WHERE codigo = 3;
+
+UPDATE funcionario
+SET cod_depto = 5
+WHERE codigo = 4;
+
+UPDATE funcionario
+SET cod_depto = 5
+WHERE codigo = 5;
