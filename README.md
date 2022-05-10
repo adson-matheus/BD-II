@@ -8,4 +8,4 @@ adson.matheus.016@ufrn.edu.br
 
 ## Tarefa 01
 
-[Link para a Tarefa 01](tarefas\t01\tarefa01.md)
+[Link para a Tarefa 01](tarefas/t01/tarefa01.md)
