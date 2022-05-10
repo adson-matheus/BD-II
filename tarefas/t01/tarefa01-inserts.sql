@@ -45,3 +45,19 @@ VALUES ('Reforma de Cemitério', 'Reforma do cemitério Campo Jorge', 4, 2, '202
 
 INSERT INTO projeto (nome, descricao, cod_depto, cod_responsavel, data_inicio, data_fim)
 VALUES ('Site do BSI', 'Site do BSI', 1, 4, '2022/04/07', '2022/12/31');
+
+--Atividade
+INSERT INTO atividade (nome, descricao, cod_responsavel, data_inicio, data_fim)
+VALUES ('Criar backend', 'definir tecnologias', 5, '2022/05/09', '2022/05/19');
+
+INSERT INTO atividade (nome, descricao, cod_responsavel, data_inicio, data_fim)
+VALUES ('Comprar material', 'comprar cimento', 3, '2022/06/09', '2022/06/10');
+
+INSERT INTO atividade (nome, descricao, cod_responsavel, data_inicio, data_fim)
+VALUES ('Identificar hosts', 'procurar os hosts', 1, '2022/03/10', '2022/03/17');
+
+INSERT INTO atividade (nome, descricao, cod_responsavel, data_inicio, data_fim)
+VALUES ('CRUD de Aluno', 'Criar o CRUD', 4, '2022/05/12', '2022/05/15');
+
+INSERT INTO atividade (nome, descricao, cod_responsavel, data_inicio, data_fim)
+VALUES ('Atualizar carga horária', 'definir CH das disciplinas', 5, '2022/05/20', '2022/05/22');
